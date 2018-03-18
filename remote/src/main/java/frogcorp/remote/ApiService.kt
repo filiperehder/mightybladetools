@@ -8,6 +8,4 @@ interface ApiService {
 
     @GET
     fun getArmors() : Single<ArmorsResponse>
-
-
 }
