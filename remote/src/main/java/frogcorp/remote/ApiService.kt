@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET
+    @GET("armaduras.json")
     fun getArmors() : Single<ArmorsResponse>
 }

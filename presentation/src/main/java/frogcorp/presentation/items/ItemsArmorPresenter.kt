@@ -1,5 +1,6 @@
 package frogcorp.presentation.items
 
+import android.util.Log
 import frogcorp.domain.items.model.Armor
 import frogcorp.domain.usecase.SingleUseCase
 import frogcorp.presentation.items.mapper.toArmorView
@@ -24,7 +25,7 @@ class ItemsArmorPresenter @Inject constructor(val view: ItemsArmorContract.Armor
     inner class ArmorSubscriber : DisposableSingleObserver<List<Armor>>() {
 
         override fun onError(e: Throwable) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            Log.d("error", e.message)
         }
 
         override fun onSuccess(t: List<Armor>) {
