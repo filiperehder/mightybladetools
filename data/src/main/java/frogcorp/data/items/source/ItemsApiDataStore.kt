@@ -8,5 +8,5 @@ import javax.inject.Inject
 
 class ItemsApiDataStore @Inject constructor(private val api: ItemsApi) : ItemsDataStore {
 
-    override fun getArmors(): Single<ArmorEntity> = api.getArmors()
+    override fun getArmors(): Single<List<ArmorEntity>> = api.getArmors()
 }

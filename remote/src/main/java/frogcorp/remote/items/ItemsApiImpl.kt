@@ -9,5 +9,9 @@ import javax.inject.Inject
 
 class ItemsApiImpl @Inject constructor(private val apiService: ApiService) : ItemsApi {
 
-    override fun getArmors(): Single<ArmorEntity> = apiService.getArmors().map { it.toArmorsEntity() }
+    override fun getArmors(): Single<List<ArmorEntity>> = apiService.getArmors().map {
+        it.result.map {
+            it.toArmorsEntity()
+        }
+    }
 }

@@ -5,5 +5,5 @@ import io.reactivex.Single
 
 interface ItemsApi {
 
-    fun getArmors() : Single<ArmorEntity>
+    fun getArmors() : Single<List<ArmorEntity>>
 }
