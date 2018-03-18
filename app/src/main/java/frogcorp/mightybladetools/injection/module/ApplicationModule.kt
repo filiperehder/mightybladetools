@@ -1,5 +1,12 @@
 package frogcorp.mightybladetools.injection.module
 
-class ApplicationModule {
+import android.app.Application
+import dagger.Binds
+import dagger.Module
 
+@Module
+abstract class ApplicationModule {
+
+    @Binds
+    internal abstract fun provideApplication(application: Application): Application
 }

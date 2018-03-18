@@ -6,12 +6,12 @@ import frogcorp.presentation.items.model.ArmorItemView
 
 interface ItemsArmorContract {
 
-    interface ArmorView : BaseView<Presenter> {
+    interface ArmorView : BaseView {
         fun showArmorList(list : List<ArmorItemView>)
-        fun showArmorDetail() : ArmorItemView
+        fun showArmorDetail(item: ArmorItemView)
     }
 
     interface Presenter : BasePresenter {
-        fun retrieveArmor()
+        fun onViewReady()
     }
 }
