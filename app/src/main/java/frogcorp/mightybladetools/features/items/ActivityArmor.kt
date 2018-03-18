@@ -1,11 +1,13 @@
 package frogcorp.mightybladetools.features.items
 
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import dagger.android.support.DaggerAppCompatActivity
 import frogcorp.mightybladetools.R
 import frogcorp.presentation.items.ItemsArmorContract
 import frogcorp.presentation.items.model.ArmorItemView
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class ActivityArmor : DaggerAppCompatActivity(), ItemsArmorContract.ArmorView {
@@ -16,7 +18,7 @@ class ActivityArmor : DaggerAppCompatActivity(), ItemsArmorContract.ArmorView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        presenter.onStart()
+        initView()
     }
 
     override fun onDestroy() {
@@ -28,9 +30,13 @@ class ActivityArmor : DaggerAppCompatActivity(), ItemsArmorContract.ArmorView {
         Log.d("detail", item.toString())
     }
 
-    override fun showArmorList(list: List<ArmorItemView>) {
-        Log.d("items", list.toString())
+    private fun initView() {
+        rvArmors.layoutManager = LinearLayoutManager(this)
+        presenter.onStart()
     }
 
 
+    override fun showArmorList(list: List<ArmorItemView>) {
+        rvArmors.adapter = AdapterArmor(this, list)
+    }
 }

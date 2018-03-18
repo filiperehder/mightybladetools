@@ -10,7 +10,7 @@ import javax.inject.Inject
 class ItemsRemoteImpl @Inject constructor(private val apiService: ApiService) : ItemsRemote {
 
     override fun getArmors(): Single<List<ArmorEntity>> = apiService.getArmors().map {
-        it.result.map {
+        it.data.map {
             it.toArmorsEntity()
         }
     }
