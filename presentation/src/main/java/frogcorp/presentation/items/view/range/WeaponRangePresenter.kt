@@ -11,17 +11,10 @@ import javax.inject.Inject
 class WeaponRangePresenter @Inject constructor(val view: WeaponRangeContract.WeaponRangeView,
                                                private val getWeaponRangeUseCase: SingleUseCase<List<WeaponRange>, Void?>) : WeaponRangeContract.Presenter {
 
-    override fun onStart() {
-        onViewReady()
-    }
-
-    override fun onStop() {
-        getWeaponRangeUseCase.dispose()
-    }
-
-    override fun onViewReady() {
-        getWeaponRangeUseCase.execute(WeaponRangeSubscriber())
-    }
+    override fun onStart() = onViewReady()
+    override fun onStop() = onViewGone()
+    override fun onViewReady() = getWeaponRangeUseCase.execute(WeaponRangeSubscriber())
+    override fun onViewGone() = getWeaponRangeUseCase.dispose()
 
     inner class WeaponRangeSubscriber : DisposableSingleObserver<List<WeaponRange>>() {
 

@@ -8,10 +8,10 @@ interface WeaponRangeContract {
 
     interface WeaponRangeView : BaseView {
         fun showWeaponRangedList(list : List<WeaponRangeItemView>)
-        fun showWeaponRangedDetail(item: WeaponRangeItemView)
     }
 
     interface Presenter : BasePresenter {
         fun onViewReady()
+        fun onViewGone()
     }
 }

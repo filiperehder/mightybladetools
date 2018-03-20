@@ -27,8 +27,4 @@ class ActivityWeaponRange : DaggerAppCompatActivity(), WeaponRangeContract.Weapo
     override fun showWeaponRangedList(list: List<WeaponRangeItemView>) {
         Log.d("RangeWeapons List", list.toString())
     }
-
-    override fun showWeaponRangedDetail(item: WeaponRangeItemView) {
-        Log.d("RangeWeapons Detail", item.toString())
-    }
 }

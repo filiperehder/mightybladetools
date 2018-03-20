@@ -26,10 +26,6 @@ class ActivityArmor : DaggerAppCompatActivity(), ItemsArmorContract.ArmorView {
         presenter.onStop()
     }
 
-    override fun showArmorDetail(item: ArmorItemView) {
-        Log.d("detail", item.toString())
-    }
-
     private fun initView() {
         rvArmors.layoutManager = LinearLayoutManager(this)
         presenter.onStart()

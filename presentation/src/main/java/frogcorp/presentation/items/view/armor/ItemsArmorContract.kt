@@ -8,10 +8,10 @@ interface ItemsArmorContract {
 
     interface ArmorView : BaseView {
         fun showArmorList(list : List<ArmorItemView>)
-        fun showArmorDetail(item: ArmorItemView)
     }
 
     interface Presenter : BasePresenter {
         fun onViewReady()
+        fun onViewGone()
     }
 }
