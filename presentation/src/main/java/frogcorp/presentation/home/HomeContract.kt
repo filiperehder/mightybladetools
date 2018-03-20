@@ -5,9 +5,5 @@ import frogcorp.presentation.BaseView
 
 interface HomeContract {
     interface HomeView : BaseView {
-        fun showMenu()
-        fun hideMenu()
-
-        fun openActivity(activity: Activity)
     }
 }
