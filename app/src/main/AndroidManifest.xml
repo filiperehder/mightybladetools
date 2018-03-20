@@ -10,13 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.items.range.ActivityWeaponRange">
+        <activity android:name=".features.home.ActivityHome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".features.items.range.ActivityWeaponRange" />
+        <activity android:name=".features.items.armor.ActivityArmor" />
     </application>
 
 </manifest>
