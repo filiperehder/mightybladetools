@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mighty Blade Tools</string>
+    <string name="priceLabel">Preço: </string>
+    <string name="defenseLabel">Defesa: </string>
 </resources>
