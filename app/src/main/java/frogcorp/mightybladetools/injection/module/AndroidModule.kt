@@ -1,5 +1,7 @@
 package frogcorp.mightybladetools.injection.module
 
+import android.app.Application
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler

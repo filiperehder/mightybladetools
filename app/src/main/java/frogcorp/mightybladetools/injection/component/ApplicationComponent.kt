@@ -10,7 +10,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = ([AndroidSupportInjectionModule::class, ClientModule::class, ActivityBuilder::class,
-                       ApiModule::class, ApplicationModule::class, AndroidModule::class]))
+                       ApiModule::class, ApplicationModule::class, AndroidModule::class, CacheModule::class]))
 
 interface ApplicationComponent : AndroidInjector<MbToolsApplication> {
 

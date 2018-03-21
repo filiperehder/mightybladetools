@@ -4,6 +4,7 @@ buildscript {
     ext.kotlin_version = '1.2.30'
 
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
@@ -19,6 +20,7 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
@@ -45,4 +47,5 @@ ext {
     http_interceptor_version = '3.9.1'
 
     picasso_version = '2.5.2'
+    room_version = '1.0.0'
 }

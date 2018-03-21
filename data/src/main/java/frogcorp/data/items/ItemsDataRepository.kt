@@ -1,5 +1,6 @@
 package frogcorp.data.items
 
+import android.util.Log
 import frogcorp.data.items.mapper.toArmor
 import frogcorp.data.items.mapper.toWeaponRange
 import frogcorp.data.items.source.ItemsDataStoreFactory
@@ -12,7 +13,7 @@ import javax.inject.Inject
 class ItemsDataRepository @Inject constructor(private val factory: ItemsDataStoreFactory) : ItemsRepository {
 
     override fun getRangeWeapon(): Single<List<WeaponRange>> {
-        return factory.retrieveItemsApiDataStore().getRangedWeapons().map {
+        return factory.retrieveItemsRemoteDataStore().getRangedWeapons().map {
             it.map {
                 it.toWeaponRange()
             }
@@ -20,7 +21,8 @@ class ItemsDataRepository @Inject constructor(private val factory: ItemsDataStor
     }
 
     override fun getArmors(): Single<List<Armor>> {
-        return factory.retrieveItemsApiDataStore().getArmors().map {
+        // Needs implement getArmors to get from cache when is already cached.
+        return factory.retrieveItemsRemoteDataStore().getArmors().map {
             it.map {
                 it.toArmor()
             }

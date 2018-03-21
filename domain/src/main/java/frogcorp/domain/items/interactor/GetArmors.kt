@@ -17,5 +17,4 @@ class GetArmors @Inject constructor(private val armorsRepository: ItemsRepositor
     override fun buildUseCaseObservable(params: Void?): Single<List<Armor>> {
         return armorsRepository.getArmors()
     }
-
 }
