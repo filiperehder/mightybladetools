@@ -11,11 +11,11 @@ import javax.inject.Inject
 
 class ItemsRemoteDataStore @Inject constructor(private val remote: ItemsRemote) : ItemsDataStore {
 
-    override fun clearArmors(): Observable<Boolean> {
+    override fun clearArmors(): Completable {
         throw UnsupportedOperationException()
     }
 
-    override fun saveArmors(armors: List<ArmorEntity>): Observable<Boolean> {
+    override fun saveArmors(armors: List<ArmorEntity>): Completable {
         throw UnsupportedOperationException()
     }
 

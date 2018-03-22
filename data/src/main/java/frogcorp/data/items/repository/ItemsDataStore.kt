@@ -8,8 +8,8 @@ import io.reactivex.Single
 
 interface ItemsDataStore {
 
-    fun clearArmors(): Observable<Boolean>
-    fun saveArmors(armors: List<ArmorEntity>): Observable<Boolean>
+    fun clearArmors(): Completable
+    fun saveArmors(armors: List<ArmorEntity>): Completable
     fun getArmors() : Single<List<ArmorEntity>>
     fun getRangedWeapons() : Single<List<WeaponRangeEntity>>
 }

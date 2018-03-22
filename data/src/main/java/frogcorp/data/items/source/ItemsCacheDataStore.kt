@@ -5,17 +5,16 @@ import frogcorp.data.items.model.WeaponRangeEntity
 import frogcorp.data.items.repository.ItemsCache
 import frogcorp.data.items.repository.ItemsDataStore
 import io.reactivex.Completable
-import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
 class ItemsCacheDataStore @Inject constructor(private val itemsCache: ItemsCache) : ItemsDataStore {
 
-    override fun clearArmors(): Observable<Boolean> {
+    override fun clearArmors(): Completable {
         return itemsCache.clearArmors()
     }
 
-    override fun saveArmors(armors: List<ArmorEntity>): Observable<Boolean> {
+    override fun saveArmors(armors: List<ArmorEntity>): Completable  {
         return itemsCache.saveArmors(armors).doOnComplete { /* Need code when save */ }
     }
 
