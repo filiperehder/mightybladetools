@@ -29,10 +29,14 @@ class AdapterArmor(private val context: Context,
     inner class ArmorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name = itemView.armorName
         val defense = itemView.armorDefense
+        val weight = itemView.armorWeight
+        val price = itemView.armorPrice
 
         fun bind(item: ArmorItemView) {
             name.text = item.name
             defense.text = item.defense.toString()
+            weight.text = item.weight.toString()
+            price.text = item.price.toString()
         }
     }
 }

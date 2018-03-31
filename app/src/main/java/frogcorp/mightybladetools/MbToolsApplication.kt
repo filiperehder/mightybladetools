@@ -2,6 +2,7 @@ package frogcorp.mightybladetools
 
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
+import frogcorp.mightybladetools.injection.component.ApplicationComponent
 import frogcorp.mightybladetools.injection.component.DaggerApplicationComponent
 
 class MbToolsApplication : DaggerApplication() {

@@ -13,7 +13,11 @@ class CacheModule {
     @Provides
     @Singleton
     fun provideDataBase(context: MbToolsApplication) : AppDatabase {
-        return Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, "TEMPDB").build()
+        return Room.databaseBuilder(
+                context.applicationContext,
+                AppDatabase::class.java,
+                "TEMPDB"
+        ).allowMainThreadQueries().build()
     }
 
 }

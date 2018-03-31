@@ -8,6 +8,7 @@ interface ItemsArmorContract {
 
     interface ArmorView : BaseView {
         fun showArmorList(list : List<ArmorItemView>)
+        fun showError()
     }
 
     interface Presenter : BasePresenter {

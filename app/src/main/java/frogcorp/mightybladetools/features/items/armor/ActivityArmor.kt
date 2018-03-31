@@ -3,6 +3,7 @@ package frogcorp.mightybladetools.features.items.armor
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
+import android.widget.Toast
 import dagger.android.support.DaggerAppCompatActivity
 import frogcorp.mightybladetools.R
 import frogcorp.presentation.items.view.armor.ItemsArmorContract
@@ -31,6 +32,9 @@ class ActivityArmor : DaggerAppCompatActivity(), ItemsArmorContract.ArmorView {
         presenter.onStart()
     }
 
+    override fun showError() {
+        // TODO
+    }
 
     override fun showArmorList(list: List<ArmorItemView>) {
         rvArmors.adapter = AdapterArmor(this, list)

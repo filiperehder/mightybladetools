@@ -18,7 +18,7 @@ class ItemsArmorPresenter @Inject constructor(val view: ItemsArmorContract.Armor
     inner class ArmorSubscriber : DisposableSingleObserver<List<Armor>>() {
 
         override fun onError(e: Throwable) {
-            Log.d("error", e.message)
+            view.showError()
         }
 
         override fun onSuccess(t: List<Armor>) {

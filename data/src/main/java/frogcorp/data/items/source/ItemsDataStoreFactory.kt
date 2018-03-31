@@ -14,7 +14,8 @@ class ItemsDataStoreFactory @Inject constructor(
     fun retrieveItemsCacheDataStore() : ItemsDataStore = itemsCacheDataStore
 
     fun retrieveDataStore() : ItemsDataStore {
-        return if(itemsCache.isCached() && !itemsCache.isExpired()) {
+
+        return if(!itemsCache.isEmpty() && !itemsCache.isExpired()) {
             retrieveItemsCacheDataStore()
         }
         else {

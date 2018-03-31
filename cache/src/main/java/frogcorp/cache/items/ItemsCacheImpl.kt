@@ -39,8 +39,8 @@ class ItemsCacheImpl @Inject constructor(private val armorDao: ArmorDao) : Items
         return Single.fromCallable({ armorDao.loadAll().map { it.toArmorsEntity() } })
     }
 
-    override fun isCached():  Boolean {
-        return false
+    override fun isEmpty():  Boolean {
+        return armorDao.loadAll().isEmpty()
     }
 
     override fun isExpired(): Boolean {

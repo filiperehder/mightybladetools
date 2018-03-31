@@ -8,6 +8,6 @@ interface ItemsCache {
     fun clearArmors(): Completable
     fun saveArmors(armors: List<ArmorEntity>): Completable
     fun getArmors() : Single<List<ArmorEntity>>
-    fun isCached() : Boolean
+    fun isEmpty() : Boolean
     fun isExpired() : Boolean
 }

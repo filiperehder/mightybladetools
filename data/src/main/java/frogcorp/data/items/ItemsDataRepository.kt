@@ -4,6 +4,8 @@ import android.util.Log
 import frogcorp.data.items.mapper.toArmor
 import frogcorp.data.items.mapper.toWeaponRange
 import frogcorp.data.items.model.ArmorEntity
+import frogcorp.data.items.repository.ItemsCache
+import frogcorp.data.items.repository.ItemsDataStore
 import frogcorp.data.items.source.ItemsCacheDataStore
 import frogcorp.data.items.source.ItemsDataStoreFactory
 import frogcorp.data.items.source.ItemsRemoteDataStore
@@ -31,8 +33,7 @@ class ItemsDataRepository @Inject constructor(private val factory: ItemsDataStor
                 .flatMap {
                     if (dataStore is ItemsRemoteDataStore) {
                         saveArmorsEntities(it).toSingle { it.map { it.toArmor() } }
-                    }
-                    else {
+                    } else {
                         Single.just(it.map { it.toArmor() })
                     }
                 }
