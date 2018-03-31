@@ -3,7 +3,7 @@ package frogcorp.mightybladetools.features.items.armor.injection
 import dagger.Module
 import dagger.Provides
 import frogcorp.domain.items.interactor.GetArmors
-import frogcorp.mightybladetools.features.items.armor.ActivityArmor
+import frogcorp.mightybladetools.features.items.armor.FragmentArmor
 import frogcorp.presentation.items.view.armor.ItemsArmorContract
 import frogcorp.presentation.items.view.armor.ItemsArmorPresenter
 
@@ -17,5 +17,5 @@ class ArmorModule {
     }
 
     @Provides
-    fun provideView(view: ActivityArmor) : ItemsArmorContract.ArmorView = view
+    fun provideView(view: FragmentArmor) : ItemsArmorContract.ArmorView = view
 }

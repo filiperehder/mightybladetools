@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/menu_informacoes">
+        <menu>
+            <item
+                android:id="@+id/nav_class"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Classes" />
+            <item
+                android:id="@+id/nav_races"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Raças" />
+            <item
+                android:id="@+id/nav_skills"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Habilidades" />
+            <item
+                android:id="@+id/nav_history"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Antecedentes" />
+            <item
+                android:id="@+id/nav_paths"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Caminhos" />
+        </menu>
+    </item>
+
+    <item android:title="Equipamentos">
+        <menu>
+            <item android:title="Ataque" />
+            <item android:title="Defesa" />
+            <item android:title="Magicos" />
+            <item android:title="Diversos" />
+        </menu>
+    </item>
+
+</menu>
