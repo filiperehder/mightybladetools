@@ -8,33 +8,36 @@
         <menu>
             <item
                 android:id="@+id/nav_class"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="Classes" />
+                android:title="@string/nav_class_menu" />
             <item
                 android:id="@+id/nav_races"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Raças" />
+                android:title="@string/nav_races_menu" />
             <item
                 android:id="@+id/nav_skills"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="Habilidades" />
+                android:title="@string/nav_skills_menu" />
             <item
                 android:id="@+id/nav_history"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Antecedentes" />
+                android:title="@string/nav_history_menu" />
             <item
                 android:id="@+id/nav_paths"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Caminhos" />
+                android:title="@string/nav_paths_menu" />
         </menu>
     </item>
 
     <item android:title="Equipamentos">
         <menu>
-            <item android:title="Ataque" />
-            <item android:title="Defesa" />
-            <item android:title="Magicos" />
-            <item android:title="Diversos" />
+            <item
+                android:id="@+id/nav_attack"
+                android:title="@string/nav_attack_menu" />
+            <item
+                android:id="@+id/nav_armor"
+                android:title="@string/nav_armor_menu" />
+            <item
+                android:id="@+id/nav_magic"
+                android:title="@string/nav_magic_menu" />
+            <item
+                android:id="@+id/nav_others"
+                android:title="@string/nav_others_menu" />
         </menu>
     </item>
 

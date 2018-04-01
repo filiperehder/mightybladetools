@@ -5,11 +5,20 @@
     <string name="armorPriceLabel">Preço: </string>
     <string name="armorDefenseLabel">Defesa: </string>
     <string name="armorWeightLabel">Peso: </string>
-    <string name="title_activity_home">ActivityHome</string>
+    <string name="title_activity_home">MbTools</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
     <string name="menu_informacoes">Informações</string>
+    <string name="nav_class_menu">Classes</string>
+    <string name="nav_races_menu">Raças</string>
+    <string name="nav_skills_menu">Habilidades</string>
+    <string name="nav_history_menu">Antecedentes</string>
+    <string name="nav_paths_menu">Caminhos</string>
+    <string name="nav_attack_menu">Ataque</string>
+    <string name="nav_armor_menu">Defesa</string>
+    <string name="nav_magic_menu">Magicos</string>
+    <string name="nav_others_menu">Diversos</string>
 </resources>

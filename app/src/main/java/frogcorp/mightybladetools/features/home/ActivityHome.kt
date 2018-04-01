@@ -67,12 +67,6 @@ class ActivityHome : DaggerAppCompatActivity(), NavigationView.OnNavigationItemS
         when (item.itemId) {
             R.id.nav_class -> {
 
-                val fragment = FragmentArmor()
-
-                supportFragmentManager.inTransaction {
-                    add(R.id.content_container, fragment)
-                }
-
             }
             R.id.nav_races -> {
 
@@ -85,6 +79,13 @@ class ActivityHome : DaggerAppCompatActivity(), NavigationView.OnNavigationItemS
             }
             R.id.nav_paths -> {
 
+            }
+            R.id.nav_armor -> {
+                val fragment = FragmentArmor()
+
+                supportFragmentManager.inTransaction {
+                    replace(R.id.content_container, fragment)
+                }
             }
         }
 

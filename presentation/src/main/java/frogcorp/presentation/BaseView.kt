@@ -1,3 +1,6 @@
 package frogcorp.presentation
 
-interface BaseView {}
+interface BaseView {
+    fun showProgressBar()
+    fun hideProgressBar()
+}

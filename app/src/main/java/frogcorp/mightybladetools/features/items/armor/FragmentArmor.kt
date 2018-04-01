@@ -1,8 +1,6 @@
 package frogcorp.mightybladetools.features.items.armor
 
-import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -11,17 +9,8 @@ import dagger.android.support.DaggerFragment
 import frogcorp.mightybladetools.R
 import frogcorp.presentation.items.model.ArmorItemView
 import frogcorp.presentation.items.view.armor.ItemsArmorContract
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_armor.*
 import javax.inject.Inject
-import dagger.android.support.AndroidSupportInjection
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-
-
-
-
-
-
 
 class FragmentArmor : DaggerFragment(), ItemsArmorContract.ArmorView {
 
@@ -36,9 +25,12 @@ class FragmentArmor : DaggerFragment(), ItemsArmorContract.ArmorView {
         return inflater.inflate(R.layout.fragment_armor, container, false)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onStop()
+    override fun showProgressBar() {
+        progressBar.visibility = View.VISIBLE
+    }
+
+    override fun hideProgressBar() {
+        progressBar.visibility = View.GONE
     }
 
     private fun initView() {
@@ -47,6 +39,11 @@ class FragmentArmor : DaggerFragment(), ItemsArmorContract.ArmorView {
     }
     override fun showError() {
         // TODO
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onStop()
     }
 
     override fun showArmorList(list: List<ArmorItemView>) {

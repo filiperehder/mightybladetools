@@ -11,7 +11,7 @@ package="frogcorp.mightybladetools">
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
     <activity
-        android:name="frogcorp.mightybladetools.features.home.ActivityHome"
+        android:name=".features.home.ActivityHome"
         android:label="@string/title_activity_home"
         android:theme="@style/AppTheme.NoActionBar" >
     <intent-filter>
@@ -20,7 +20,6 @@ package="frogcorp.mightybladetools">
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 </activity>
-<activity android:name=".features.items.range.ActivityWeaponRange" />
-<activity android:name=".features.items.armor.ActivityArmor" />
+<!--<activity android:name=".features.items.range.ActivityWeaponRange" />-->
 </application>
 </manifest>

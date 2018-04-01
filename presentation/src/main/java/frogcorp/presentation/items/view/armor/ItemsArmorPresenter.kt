@@ -1,6 +1,5 @@
 package frogcorp.presentation.items.view.armor
 
-import android.util.Log
 import frogcorp.domain.items.model.Armor
 import frogcorp.domain.usecase.SingleUseCase
 import frogcorp.presentation.items.mapper.toArmorView
@@ -12,16 +11,22 @@ class ItemsArmorPresenter @Inject constructor(val view: ItemsArmorContract.Armor
 
     override fun onStart() = onViewReady()
     override fun onStop() = onViewGone()
-    override fun onViewReady() = getArmorsUseCase.execute(ArmorSubscriber())
+
+    override fun onViewReady() {
+        view.showProgressBar()
+        getArmorsUseCase.execute(ArmorSubscriber())
+    }
     override fun onViewGone() = getArmorsUseCase.dispose()
 
     inner class ArmorSubscriber : DisposableSingleObserver<List<Armor>>() {
 
         override fun onError(e: Throwable) {
+            view.hideProgressBar()
             view.showError()
         }
 
         override fun onSuccess(t: List<Armor>) {
+            view.hideProgressBar()
             view.showArmorList(t.map {it.toArmorView()})
         }
     }
