@@ -49,7 +49,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
         android:text="@string/armorPriceLabel"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +60,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/armorPriceLabel"
         app:layout_constraintTop_toBottomOf="@+id/armorDefense"
@@ -73,7 +71,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
         android:text="@string/armorWeightLabel"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,11 +82,56 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/armorWeightLabel"
         app:layout_constraintTop_toBottomOf="@+id/armorPrice"
         tools:text="0"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/armorFnLabel"
+        android:text="@string/armorFnLabel"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/armorWeightLabel"
+        android:layout_height="wrap_content"
+        tools:text="FN: "
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/armorFn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/armorFnLabel"
+        app:layout_constraintTop_toBottomOf="@+id/armorWeight"
+        tools:text="0"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/armorNotesLabel"
+        android:text="@string/armorNotesLabel"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/armorFnLabel"
+        android:layout_height="wrap_content"
+        tools:text="Observacoes: "
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/armorNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/armorNotesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/armorFn"
+        tools:text="-"
         android:layout_marginLeft="8dp" />
 
 

@@ -31,12 +31,16 @@ class AdapterArmor(private val context: Context,
         val defense = itemView.armorDefense
         val weight = itemView.armorWeight
         val price = itemView.armorPrice
+        val fn = itemView.armorFn
+        val notes = itemView.armorNotes
 
         fun bind(item: ArmorItemView) {
             name.text = item.name
             defense.text = item.defense.toString()
             weight.text = item.weight.toString()
             price.text = item.price.toString()
+            fn.text = item.fn.toString()
+//            notes.text = item.notes
         }
     }
 }

@@ -1,15 +1,18 @@
 <resources>
     <string name="app_name">Mighty Blade Tools</string>
+    <string name="title_activity_home">Mighty Blade Tools</string>
 
     <!-- Labels -->
     <string name="armorPriceLabel">Preço: </string>
     <string name="armorDefenseLabel">Defesa: </string>
     <string name="armorWeightLabel">Peso: </string>
-    <string name="title_activity_home">MbTools</string>
+    <string name="armorFnLabel">FN: </string>
+    <string name="armorNotesLabel">Observações: </string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <!-- Navigation -->
     <string name="action_settings">Settings</string>
     <string name="menu_informacoes">Informações</string>
     <string name="nav_class_menu">Classes</string>
