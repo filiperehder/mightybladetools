@@ -20,6 +20,6 @@ package="frogcorp.mightybladetools">
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 </activity>
-<!--<activity android:name=".features.items.range.ActivityWeaponRange" />-->
+<activity android:name=".features.races.ActivityRaceDetail" />
 </application>
 </manifest>

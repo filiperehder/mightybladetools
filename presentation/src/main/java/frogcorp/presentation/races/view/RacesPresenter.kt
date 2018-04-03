@@ -16,8 +16,8 @@ class RacesPresenter @Inject constructor(val view: RaceContract.RaceView,
         getRacesUseCase.dispose()
     }
 
-    override fun onRaceChosed(name: String) {
-        getRacesUseCase.execute(RaceSubscriber(), name)
+    override fun OnChosedRace(race: String) {
+        getRacesUseCase.execute(RaceSubscriber(), race)
     }
 
     inner class RaceSubscriber : DisposableSingleObserver<Race>() {

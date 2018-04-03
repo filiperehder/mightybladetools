@@ -7,6 +7,7 @@ import frogcorp.mightybladetools.features.items.armor.FragmentArmor
 import frogcorp.mightybladetools.features.items.armor.injection.ArmorModule
 import frogcorp.mightybladetools.features.items.injection.ItemsModule
 import frogcorp.mightybladetools.features.races.FragmentRace
+import frogcorp.mightybladetools.features.races.ActivityRaceDetail
 import frogcorp.mightybladetools.features.races.di.RacesModule
 import frogcorp.mightybladetools.injection.scope.PerFragment
 
@@ -21,5 +22,8 @@ abstract class ActivityBuilder {
     internal abstract fun bindHomeActivity(): ActivityHome
 
     @ContributesAndroidInjector(modules = [RacesModule::class])
-    internal abstract fun bindRaceFragment(): FragmentRace
+    internal abstract fun bindDetailRaceFragment(): ActivityRaceDetail
+
+    @ContributesAndroidInjector
+    internal abstract fun bindRaceFragment() : FragmentRace
 }

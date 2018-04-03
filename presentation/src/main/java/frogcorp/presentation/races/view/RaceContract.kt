@@ -13,6 +13,6 @@ interface RaceContract {
     }
 
     interface Presenter : BasePresenter {
-        fun onRaceChosed(name: String)
+        fun OnChosedRace(race: String)
     }
 }
