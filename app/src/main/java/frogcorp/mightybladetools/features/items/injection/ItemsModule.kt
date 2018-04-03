@@ -29,4 +29,5 @@ class ItemsModule {
     fun provideItemsCache(appDatabase: AppDatabase) : ItemsCache {
         return ItemsCacheImpl(appDatabase.armorDao())
     }
+
 }

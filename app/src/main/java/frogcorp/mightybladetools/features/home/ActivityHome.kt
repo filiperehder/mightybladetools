@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_activity_home.*
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.DaggerAppCompatActivity
+import frogcorp.mightybladetools.features.races.FragmentRace
 import javax.inject.Inject
 
 
@@ -66,7 +67,11 @@ class ActivityHome : DaggerAppCompatActivity(), NavigationView.OnNavigationItemS
 
         when (item.itemId) {
             R.id.nav_class -> {
+                val fragment = FragmentRace()
 
+                supportFragmentManager.inTransaction {
+                    replace(R.id.content_container, fragment)
+                }
             }
             R.id.nav_races -> {
 

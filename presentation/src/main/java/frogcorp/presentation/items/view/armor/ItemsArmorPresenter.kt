@@ -9,14 +9,12 @@ import javax.inject.Inject
 class ItemsArmorPresenter @Inject constructor(val view: ItemsArmorContract.ArmorView,
                                               private val getArmorsUseCase: SingleUseCase<List<Armor>, Void?>) : ItemsArmorContract.Presenter {
 
-    override fun onStart() = onViewReady()
-    override fun onStop() = onViewGone()
-
-    override fun onViewReady() {
+    override fun onStart() {
         view.showProgressBar()
         getArmorsUseCase.execute(ArmorSubscriber())
     }
-    override fun onViewGone() = getArmorsUseCase.dispose()
+
+    override fun onStop() = getArmorsUseCase.dispose()
 
     inner class ArmorSubscriber : DisposableSingleObserver<List<Armor>>() {
 

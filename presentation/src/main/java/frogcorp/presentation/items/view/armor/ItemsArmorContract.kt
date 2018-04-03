@@ -12,7 +12,5 @@ interface ItemsArmorContract {
     }
 
     interface Presenter : BasePresenter {
-        fun onViewReady()
-        fun onViewGone()
     }
 }
