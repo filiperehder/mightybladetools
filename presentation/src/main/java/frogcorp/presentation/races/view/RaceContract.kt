@@ -9,8 +9,10 @@ interface RaceContract {
 
 
     interface RaceView : BaseView {
-        fun showRace(name: String) : RaceItemView
+        fun showRace(race: RaceItemView)
     }
 
-    interface Presenter : BasePresenter
+    interface Presenter : BasePresenter {
+        fun onRaceChosed(name: String)
+    }
 }
