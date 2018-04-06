@@ -9,7 +9,10 @@ import dagger.android.support.DaggerFragment
 import frogcorp.mightybladetools.R
 import frogcorp.presentation.items.model.ArmorItemView
 import frogcorp.presentation.items.view.armor.ItemsArmorContract
+import io.reactivex.Single
 import kotlinx.android.synthetic.main.fragment_armor.*
+import retrofit2.HttpException
+import java.net.ConnectException
 import javax.inject.Inject
 
 class FragmentArmor : DaggerFragment(), ItemsArmorContract.ArmorView {

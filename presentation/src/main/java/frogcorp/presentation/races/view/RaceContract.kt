@@ -7,7 +7,6 @@ import io.reactivex.Single
 
 interface RaceContract {
 
-
     interface RaceView : BaseView {
         fun showRace(race: RaceItemView)
     }

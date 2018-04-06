@@ -2,6 +2,8 @@ package frogcorp.mightybladetools.injection.module
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
+import frogcorp.mightybladetools.features.classes.FragmentClasse
+import frogcorp.mightybladetools.features.classes.di.ClassesModule
 import frogcorp.mightybladetools.features.home.ActivityHome
 import frogcorp.mightybladetools.features.items.armor.FragmentArmor
 import frogcorp.mightybladetools.features.items.armor.injection.ArmorModule
@@ -26,4 +28,8 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
     internal abstract fun bindRaceFragment() : FragmentRace
+
+    @ContributesAndroidInjector(modules = [ClassesModule::class])
+    internal abstract fun bindClasseFragment() : FragmentClasse
+
 }

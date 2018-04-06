@@ -13,16 +13,22 @@ import javax.inject.Inject
 class ItemsDataRepository @Inject constructor(private val factory: ItemsDataStoreFactory) : ItemsRepository {
 
     override fun getArmors(): Single<List<Armor>> {
-        val dataStore = factory.retrieveDataStore()
+        val dataStore = factory.retrieveItemsRemoteDataStore()
 
-        return dataStore.getArmors()
-                .flatMap {
-                    if (dataStore is ItemsRemoteDataStore) {
-                        saveArmorsEntities(it).toSingle { it.map { it.toArmor() } }
-                    } else {
-                        Single.just(it.map { it.toArmor() })
-                    }
-                }
+        return dataStore.getArmors().map {
+            it.map {
+                it.toArmor()
+            }
+        }
+
+//        return dataStore.getArmors()
+//                .flatMap {
+//                    if (dataStore is ItemsRemoteDataStore) {
+//                        saveArmorsEntities(it).toSingle { it.map { it.toArmor() } }
+//                    } else {
+//                        Single.just(it.map { it.toArmor() })
+//                    }
+//                }
     }
 
     private fun saveArmorsEntities(armors: List<ArmorEntity>) : Completable {
