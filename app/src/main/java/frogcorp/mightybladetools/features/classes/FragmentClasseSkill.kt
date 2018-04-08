@@ -1,19 +1,19 @@
 package frogcorp.mightybladetools.features.classes
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import dagger.android.support.DaggerFragment
 import frogcorp.mightybladetools.R
-import frogcorp.presentation.classes.model.ClasseItemView
-import frogcorp.presentation.classes.view.overview.ClasseContract
-import kotlinx.android.synthetic.main.fragment_classe.*
+import frogcorp.presentation.classes.model.ClasseSkillItemView
+import frogcorp.presentation.classes.view.skills.ClasseSkillContract
 import javax.inject.Inject
 
-class FragmentClasse : DaggerFragment(), ClasseContract.ClasseView {
+class FragmentClasseSkill : DaggerFragment(), ClasseSkillContract.ClasseView {
 
-    @Inject lateinit var presenter : ClasseContract.Presenter
+    @Inject lateinit var presenter: ClasseSkillContract.Presenter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_classe, container, false)
@@ -21,22 +21,24 @@ class FragmentClasse : DaggerFragment(), ClasseContract.ClasseView {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         presenter.onChosedClasse("bardo")
     }
 
     override fun showProgressBar() {
-        progressBar.visibility = View.VISIBLE
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun hideProgressBar() {
-        progressBar.visibility = View.GONE
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun showClasse(item: ClasseItemView) {
-        txtName.text = item.name
+    override fun showSkillsFromClass(list: List<ClasseSkillItemView>) {
+        Log.d("SKILLS", list.toString())
     }
 
     override fun showError() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
 }

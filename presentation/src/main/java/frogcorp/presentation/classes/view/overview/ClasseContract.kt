@@ -1,4 +1,4 @@
-package frogcorp.presentation.classes.view
+package frogcorp.presentation.classes.view.overview
 
 import frogcorp.presentation.BasePresenter
 import frogcorp.presentation.BaseView

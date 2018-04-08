@@ -8,8 +8,8 @@ import frogcorp.data.classes.source.ClassesDataStoreFactory
 import frogcorp.domain.classes.interactor.GetClasses
 import frogcorp.domain.classes.repository.ClasseRepository
 import frogcorp.mightybladetools.features.classes.FragmentClasse
-import frogcorp.presentation.classes.view.ClasseContract
-import frogcorp.presentation.classes.view.ClassePresenter
+import frogcorp.presentation.classes.view.overview.ClasseContract
+import frogcorp.presentation.classes.view.overview.ClassePresenter
 import frogcorp.remote.ApiService
 import frogcorp.remote.classes.ClassesRemoteImpl
 

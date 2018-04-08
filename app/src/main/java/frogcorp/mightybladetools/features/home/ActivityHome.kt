@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_activity_home.*
 import dagger.android.support.DaggerAppCompatActivity
 import frogcorp.mightybladetools.features.classes.FragmentClasse
+import frogcorp.mightybladetools.features.classes.FragmentClasseSkill
 import frogcorp.mightybladetools.features.races.FragmentRace
 
 
@@ -78,7 +79,11 @@ class ActivityHome : DaggerAppCompatActivity(), NavigationView.OnNavigationItemS
 
             }
             R.id.nav_skills -> {
+                val fragmment = FragmentClasseSkill()
 
+                supportFragmentManager.inTransaction {
+                    replace(R.id.content_container, fragmment)
+                }
             }
             R.id.nav_paths -> {
 

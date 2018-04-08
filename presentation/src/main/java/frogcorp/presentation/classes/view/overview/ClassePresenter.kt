@@ -1,4 +1,4 @@
-package frogcorp.presentation.classes.view
+package frogcorp.presentation.classes.view.overview
 
 import android.util.Log
 import frogcorp.domain.classes.model.Classe
